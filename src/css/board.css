@@ -1,6 +1,7 @@
 .board {
-    height: 80vh;
-    width: auto;
-   
-    background-image: url(../images/familyGuy.png);
+    height: 77vh;
+    width: 74vw;
+    margin: 1.5vh;
+    border-radius: 1.3vh;
+    background-color: rgba(240, 248, 255, 0.452);
 }

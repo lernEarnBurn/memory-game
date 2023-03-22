@@ -7,7 +7,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="top-bar">
-        <h1 className="title">Memory</h1>
+        <div className="title"></div>
       </div>
       <div className="content-container">
         <Scoreboard/>

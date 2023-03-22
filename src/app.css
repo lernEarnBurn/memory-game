@@ -1,6 +1,6 @@
 :root {
     --background: rgba(222, 151, 255, 0.603);
-    --secondary-color: rgba(92, 22, 255, 0.356);
+    --secondary-color: rgba(0, 0, 0, 0.473);
   }
   
 
@@ -14,8 +14,19 @@ body {
 
 .top-bar {
     background-color: var(--secondary-color);
-    text-align: center;
+    height: 20vh;
 }
+
 .title {
     margin: auto;
+    height: 100%;
+    width: 20vw;
+    background-image: url('./images/familyGuy.png');
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 4vh;
+}
+
+.content-container {
+    display: flex;
 }
