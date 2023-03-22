@@ -1,0 +1,6 @@
+.board {
+    height: 80vh;
+    width: auto;
+   
+    background-image: url(../images/familyGuy.png);
+}
