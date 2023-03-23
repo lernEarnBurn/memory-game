@@ -1,3 +1,6 @@
+
+
+
 .board {
     height: 78vh;
     width: 75vw;
@@ -20,7 +23,11 @@ ul {
     width : 13vw;
     margin: 1vh;
     border-radius: .75vh;
-    background-color: rgba(75, 75, 75, 0.308);
+    background-color: rgba(240, 248, 255, 0.6);
+}
+
+.card:hover {
+    transform: rotate(10deg)
 }
 
 .pic {

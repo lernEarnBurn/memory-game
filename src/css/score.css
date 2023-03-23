@@ -1,3 +1,8 @@
+:root {
+    --score-border: .6vh solid aliceblue;
+}
+
+
 .score-container {
     height: 78vh;
     width: 24vw;
@@ -5,4 +10,58 @@
     margin-right: 0;
     border-radius: 1.3vh;
     background-color: rgba(115, 234, 255, 0.548);
+    display:flex;
+    flex-direction: column;
+}
+
+.score.current {
+    border-top-left-radius: 1.3vh;
+    border-top-right-radius: 1.3vh;
+}
+
+.score {
+   border: var(--score-border);
+    height: 25%;
+    width: auto;
+    border-bottom: none;
+    font-size: 8vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.instructions {
+    border-bottom-left-radius: 1.3vh;
+    border-bottom-right-radius: 1.3vh;
+    border: var(--score-border);
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    width:85%;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+.top {
+    position: fixed;
+    font-size: 2.5vh;
+    left:  3vh;
+    top: 22vh;
+}
+
+.bottom {
+    position: fixed;
+    font-size: 2.5vh;
+    left:   3vh;
+    top: 42vh;
 }
