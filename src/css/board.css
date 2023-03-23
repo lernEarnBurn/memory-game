@@ -1,7 +1,20 @@
 .board {
-    height: 77vh;
-    width: 74vw;
-    margin: 1.5vh;
+    height: 78vh;
+    width: 75vw;
+    margin: 1vh;
     border-radius: 1.3vh;
     background-color: rgba(240, 248, 255, 0.452);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{ 
+    height: 45vh;
+    width : 14vw;
+    background-size: cover;
+    background-position: center center;
 }
