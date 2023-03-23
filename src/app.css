@@ -21,7 +21,7 @@ body {
     margin: auto;
     height: 100%;
     width: 20vw;
-    background-image: url('./images/familyGuy.png');
+    background-image: url('./familyGuy.png');
     background-size: cover;
     background-position: center center;
     margin-bottom: 4vh;
