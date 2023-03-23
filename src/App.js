@@ -9,14 +9,14 @@ function App() {
 
   const [cards, cardAmount] = useState([
     "/images/brian.png",
-    "/images/chris.jpeg",
-    "/images/joe.jpeg",
-    "/images/louis.jpeg",
-    "/images/moe.jpeg",
-    "/images/mort.jpeg",
-    "/images/peter.jpeg",
+    "/images/chris.png",
+    "/images/joe.png",
+    "/images/louis.png",
+    "/images/moe.png",
+    "/images/mort.png",
+    "/images/peter.png",
     "/images/stewie.png",
-    "/images/quagmire.jpeg",
+    "/images/quagmire.png",
     "/images/meg.png"
   ])
 
