@@ -7,7 +7,7 @@ import '../css/board.css'
 
 export function Board(props){
     
-    let cardPaths = [
+    const [cardPaths, mixPaths] = useState([
         "/images/brian.png",
         "/images/chris.png",
         "/images/joe.png",
@@ -18,7 +18,7 @@ export function Board(props){
         "/images/stewie.png",
         "/images/quagmire.png",
         "/images/meg.png"
-      ]
+      ])
 
     const [chosen, adjustChosen] = useState([])
     
@@ -37,7 +37,15 @@ export function Board(props){
             props.changeScore()
         }
        
-        
+        mixPaths(scrambleCards(Array.from(cardPaths)))
+    }
+
+    function scrambleCards(array){
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
     }
 
     return (
