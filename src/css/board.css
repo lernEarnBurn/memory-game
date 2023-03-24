@@ -23,11 +23,11 @@ ul {
     width : 13vw;
     margin: 1vh;
     border-radius: .75vh;
-    background-color: rgb(247, 255, 247);
+    background-color: rgb(247, 255, 247, .5);
 }
 
 .card:hover {
-    transform: rotate(10deg)
+    transform: scale(1.2);
 }
 
 .pic {

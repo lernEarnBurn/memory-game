@@ -5,20 +5,22 @@ import { Scoreboard } from "./components/score";
 
 
 
-function App() {
+function App(props) {
+  const [currentScore, scoreChanger] = useState(0)  
+  const [highScore, scoreChanger2] = useState(0)
 
-  const [cards, cardAmount] = useState([
-    "/images/brian.png",
-    "/images/chris.png",
-    "/images/joe.png",
-    "/images/louis.png",
-    "/images/moe.png",
-    "/images/mort.png",
-    "/images/peter.png",
-    "/images/stewie.png",
-    "/images/quagmire.png",
-    "/images/meg.png"
-  ])
+  function resetCurrentScore(){
+    scoreChanger(0)
+  }
+
+  function changeScore(){
+    if(currentScore < highScore){
+      scoreChanger(currentScore + 1)
+    }else{
+      scoreChanger2(highScore + 1)
+      scoreChanger(currentScore + 1)
+    }
+  }
 
   return (
     <React.Fragment>
@@ -26,8 +28,8 @@ function App() {
         <div className="title"></div>
       </div>
       <div className="content-container">
-        <Scoreboard/>
-        <Board cardPaths={cards}/>
+        <Scoreboard currentScore={currentScore} highScore={highScore}/>
+        <Board changeScore={changeScore} resetCurrentScore={resetCurrentScore}/>
       </div>
     </React.Fragment>
   );
