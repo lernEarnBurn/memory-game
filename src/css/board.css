@@ -26,9 +26,7 @@ ul {
     background-color: rgb(247, 255, 247, .5);
 }
 
-.card:hover {
-    transform: scale(1.2);
-}
+
 
 .pic {
     height: 35vh;

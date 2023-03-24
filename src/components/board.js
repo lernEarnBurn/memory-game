@@ -33,6 +33,7 @@ export function Board(props){
             props.resetCurrentScore()
         }else if(chosen.length === 8){
             adjustChosen([])
+            props.changeScore()
         }else{            
             props.changeScore()
         }
