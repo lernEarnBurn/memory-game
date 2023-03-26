@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, {  useState } from "react";
 import '../css/board.css'
+import { animated, useSpring } from "react-spring";
 
 
  
@@ -22,6 +23,9 @@ export function Board(props){
 
     const [chosen, adjustChosen] = useState([])
     
+    const [springs, api] = useSpring(() => ({
+        from: { opacity: 1 },
+      }))
     
     function cardSelect(event){
 
@@ -39,7 +43,17 @@ export function Board(props){
         }
        
         mixPaths(scrambleCards(Array.from(cardPaths)))
-    }
+
+        api.start({
+            from: {
+              opacity: 0,
+            },
+            to: {
+              opacity: 1,
+            },
+        })
+    }      
+    
 
     function scrambleCards(array){
         for (let i = array.length - 1; i > 0; i--) {
@@ -49,13 +63,14 @@ export function Board(props){
           return array;
     }
 
+
     return (
         <div className="board">
             <ul className="card-container">
                 {cardPaths.map((path, index) => {
-                    return  <li key={index} className="card">
+                    return  <animated.li style={springs} key={index} className="card">
                                 <img className="pic" onClick={cardSelect} src={path} alt={`image: ${index}`}/>
-                            </li>
+                            </animated.li>
                 })}
             </ul>
         </div>
