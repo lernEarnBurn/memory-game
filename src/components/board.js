@@ -4,20 +4,21 @@ import '../css/board.css'
 import { animated, useSpring } from "react-spring";
 
 
+
  
 
 export function Board(props){
     
     const [cardPaths, mixPaths] = useState([
-        "/images/chris.png",
         "/images/joe.png",
-        "/images/louis.png",
         "/images/moe.png",
         "/images/mort.png",
+        "/images/meg.png",
+        "/images/louis.png",
         "/images/peter.png",
         "/images/stewie.png",
         "/images/quagmire.png",
-        "/images/meg.png",
+        "/images/chris.png",
         "/images/brian.png"
       ])
 
@@ -69,7 +70,7 @@ export function Board(props){
             <ul className="card-container">
                 {cardPaths.map((path, index) => {
                     return  <animated.li style={springs} key={index} className="card">
-                                <img className="pic" onClick={cardSelect} src={path} alt={`image: ${index}`}/>
+                                <img className="pic" onClick={cardSelect} src={process.env.PUBLIC_URLs + path} alt="image"/>
                             </animated.li>
                 })}
             </ul>
