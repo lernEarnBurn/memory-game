@@ -70,7 +70,7 @@ export function Board(props){
             <ul className="card-container">
                 {cardPaths.map((path, index) => {
                     return  <animated.li style={springs} key={index} className="card">
-                                <img className="pic" onClick={cardSelect} src={process.env.PUBLIC_URLs + path} alt="image"/>
+                                <img className="pic" onClick={cardSelect} src={process.env.PUBLIC_URL + path} alt="image"/>
                             </animated.li>
                 })}
             </ul>
