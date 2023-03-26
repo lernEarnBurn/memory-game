@@ -9,7 +9,6 @@ import { animated, useSpring } from "react-spring";
 export function Board(props){
     
     const [cardPaths, mixPaths] = useState([
-        "/images/brian.png",
         "/images/chris.png",
         "/images/joe.png",
         "/images/louis.png",
@@ -18,7 +17,8 @@ export function Board(props){
         "/images/peter.png",
         "/images/stewie.png",
         "/images/quagmire.png",
-        "/images/meg.png"
+        "/images/meg.png",
+        "/images/brian.png"
       ])
 
     const [chosen, adjustChosen] = useState([])
